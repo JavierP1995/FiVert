@@ -10,7 +10,11 @@ public class Validator {
    * @param rut rut de persona
    * @return validez s/n
    */
+  //FIXME index out of value
   public static boolean isRut_valid(String rut) {
+    if(rut == null){
+      return false;
+    }
     rut = rut.toUpperCase();
     String numero = rut.substring(0, rut.length() - 1);
     char verificador = rut.charAt(rut.length() - 1);

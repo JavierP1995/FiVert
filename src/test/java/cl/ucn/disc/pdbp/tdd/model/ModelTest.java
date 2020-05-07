@@ -45,8 +45,6 @@ public final class ModelTest {
         Persona persona = new Persona(nombre, apellido, rutOk);
         Assertions.assertEquals(persona.getNombre(), nombre);
         Assertions.assertEquals(persona.getApellido(), apellido);
-        Assertions.assertEquals(persona.getNombreApellido(), nombreApellido);
-
         // Testing nullity
         log.debug(".. nullity ..");
         Assertions.assertThrows(NullPointerException.class, () -> new Persona(null, null, null));
