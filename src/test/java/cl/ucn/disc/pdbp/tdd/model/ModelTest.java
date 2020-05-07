@@ -1,7 +1,7 @@
 package cl.ucn.disc.pdbp.tdd.model;
 
+import cl.ucn.disc.pdbp.tdd.util.Validator;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -63,7 +63,6 @@ public final class ModelTest {
         Assertions.assertThrows(RuntimeException.class, () -> new Persona(nombreError, apellido, rutError));
         Assertions.assertThrows(RuntimeException.class, () -> new Persona(nombre, apellidoError, rutError));
 
-        // TODO: Add the size of nombre y apellido.
 
         log.debug("Done.");
 
